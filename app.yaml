@@ -1,0 +1,16 @@
+application: guestbook
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: .*
+  script: guestbook.views.list_greetings
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'djangoGuestbook.settings'
+
+libraries:
+- name: django
+  version: "1.5"
