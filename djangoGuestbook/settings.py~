@@ -4,7 +4,7 @@ import os
 
 SECRET_KEY = '=r-$b*8hgw3sc58&9t0twan5ch1k-3d3vfc4(wk0rn3wa1dhvi'
 
-MEMCACHE_HOSTS = ['127.0.0.1']
+MEMCACHE_HOSTS = ["127.0.0.1:11211"]
 CACHE_BACKEND = 'memcached://' + ';'.join(MEMCACHE_HOSTS) + '/?timeout=60'
 INSTALLED_APPS = (
     'djangoappengine',
